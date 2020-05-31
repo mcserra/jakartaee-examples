@@ -20,5 +20,6 @@
         <module>formAuth</module>
         <module>inMemoryIdentityStore</module>
         <module>servlet</module>
+        <module>jwt</module>
     </modules>
 </project>

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  backend:
+    #container_name: price-service_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8080"
+      - "9082:9009"
+      - "4882:4848"
+    restart: always
+    entrypoint:
+      - java
+      - -Xdebug
+      - -Xrunjdwp:transport=dt_socket,address=*:9009,server=y,suspend=n
+      - -jar
+      - /opt/payara/payara-micro.jar
+    command: ["--deploy", "/opt/payara/deployments/jwt.war"]

@@ -6,3 +6,4 @@
 4. [A FORM authentication example](formAuth/README.md)
 5. [An in-memory identity store example](inMemoryStore/README.md)
 6. [A Servlet example](servlet/README.md)
+7. [A JWT example](jwt/README.md)
